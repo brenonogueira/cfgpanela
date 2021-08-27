@@ -96,7 +96,7 @@ export default function Content() {
     {
       url: `${img1}`,
       title: "Cfgs",
-      width: "70%",
+      width: "69%",
     },
   ];
 
@@ -104,7 +104,7 @@ export default function Content() {
     {
       url: `${img2}`,
       title: "Cadastre a sua CFG!",
-      width: "70%",
+      width: "69%",
     },
   ];
 

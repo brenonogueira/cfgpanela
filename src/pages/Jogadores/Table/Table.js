@@ -8,12 +8,7 @@ import axios from "axios";
 
 const FilterComponent = ({ filterText, onFilter, onClear }) => (
   <>
-    <Grid style={{ marginTop: "-100px" }} item xs={12} md={8} lg={12}>
-      <Typography fullWidth component="h3" variant="h4" color="primary">
-        Cfgs
-      </Typography>
-    </Grid>
-    <Grid style={{ marginTop: "-10px" }} item xs={12} md={8} lg={12}>
+    <Grid style={{ marginTop: "-50px" }} item xs={12} md={8} lg={12}>
       <TextField
         style={{ width: "100%" }}
         id="search"
@@ -56,17 +51,17 @@ const columns = [
   },
   {
     name: "Função",
-    selector: "jogador_bt_funcao.funcao",
+    selector: "funcaos.funcao",
     sortable: true,
   },
   {
     name: "Mapa",
-    selector: "jogador_bt_mapa.mapa",
+    selector: "mapas.mapa",
     sortable: true,
   },
   {
     name: "Resolução",
-    selector: "jogador_bt_resolucao.resolucao",
+    selector: "resolucaos.resolucao",
     sortable: true,
   },
 ];
@@ -117,11 +112,13 @@ export default function Table() {
     (async () => {
       const response = await axios.get(jogador);
       setJogadores(response.data);
+      console.log(jogadores);
     })();
   }, [jogadores]);
 
   return (
     <DataTable
+      style={{ backgroundColor: "#3f51b5" }}
       columns={columns}
       data={filteredItems}
       pagination

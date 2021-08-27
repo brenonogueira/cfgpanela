@@ -164,9 +164,9 @@ export default function Layout({ children }) {
         <List>{ListItems}</List>
         <Divider />
       </Drawer>
-      <main className={classes.content} style={{ backgroundColor: "#031926" }}>
+      <main className={classes.content} style={{ backgroundColor: "" }}>
         <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
+        <Container maxWidth="xl" className={classes.container}>
           {children}
         </Container>
       </main>
