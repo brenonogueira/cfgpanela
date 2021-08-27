@@ -4,8 +4,7 @@ import Grid from "@material-ui/core/Grid";
 import Table from "../Jogadores/Table/Table";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
-import Divider from "@material-ui/core/Divider";
-import AppBar from "@material-ui/core/AppBar";
+
 export default function index() {
   return (
     <Grid container spacing={1}>

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import Select from "@material-ui/core/Select";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
@@ -64,8 +63,6 @@ const Cadastro = () => {
                     style={{ backgroundColor: "#fff", color: "white" }}
                     color="white"
                     fullWidth
-                    color="primary"
-                    id="input-with-icon-grid"
                     label="Nome"
                     variant="outlined"
                     value={nome}
@@ -76,7 +73,6 @@ const Cadastro = () => {
                   <TextField
                     fullWidth
                     color="primary"
-                    id="input-with-icon-grid"
                     label="Nickname"
                     variant="outlined"
                     value={nickname}
@@ -89,7 +85,6 @@ const Cadastro = () => {
                   <TextField
                     fullWidth
                     color="primary"
-                    id="input-with-icon-grid"
                     label="DPI"
                     variant="outlined"
                     value={dpi}
@@ -100,7 +95,6 @@ const Cadastro = () => {
                   <TextField
                     color="primary"
                     fullWidth
-                    id="input-with-icon-grid"
                     label="Sensibilidade"
                     variant="outlined"
                     value={sensibilidade}
@@ -110,7 +104,6 @@ const Cadastro = () => {
                 <Grid item xs={12} md={6} lg={4}>
                   <TextField
                     fullWidth
-                    id="input-with-icon-grid"
                     label="Mira"
                     color="primary"
                     variant="outlined"

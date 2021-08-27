@@ -1,5 +1,4 @@
 import React, { useState, useMemo, useEffect } from "react";
-import Typography from "@material-ui/core/Typography";
 import DataTable from "react-data-table-component";
 import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
