@@ -1,7 +1,7 @@
 import React from "react";
 import Content from "./Content/Content";
 import Grid from "@material-ui/core/Grid";
-import Table from "../Jogadores/Table/Table";
+
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
 import { TableMaterial } from "../Jogadores/Table/TableMaterial";
@@ -26,7 +26,6 @@ export default function index() {
           <Typography variant="h6">Cfgs</Typography>
         </Toolbar>
         <div style={{ border: "1px solid #3f51b5" }}>
-          {/* <Table /> */}
           <TableMaterial />
         </div>
       </Grid>
