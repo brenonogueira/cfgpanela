@@ -50,7 +50,6 @@ export function TableMaterial() {
     (async () => {
       const response = await axios.get(jogador);
       setJogadores(response.data);
-      console.log(jogadores);
     })();
   }, []);
 
