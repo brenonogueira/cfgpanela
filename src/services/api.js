@@ -4,3 +4,4 @@ export const jogador = `${base_url}/jogador`;
 export const mapas = `${base_url}/mapa`;
 export const funcao = `${base_url}/funcao`;
 export const resolucao = `${base_url}/resolucao`;
+export const binds = `${base_url}/binds`;

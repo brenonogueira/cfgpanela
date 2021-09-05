@@ -32,5 +32,13 @@ export const ListItems = (
         <ListItemText primary="Jogadores" />
       </ListItem>
     </Link>
+    <Link href="/binds" style={{ textDecoration: "none", color: "#fff" }}>
+      <ListItem button>
+        <ListItemIcon style={{ textDecoration: "none", color: "#fff" }}>
+          <PeopleIcon />
+        </ListItemIcon>
+        <ListItemText primary="Binds" />
+      </ListItem>
+    </Link>
   </div>
 );
