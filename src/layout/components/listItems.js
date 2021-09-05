@@ -2,24 +2,26 @@ import React from "react";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import DashboardIcon from "@material-ui/icons/Dashboard";
 import PeopleIcon from "@material-ui/icons/People";
 import Link from "@material-ui/core/Link";
+import HomeIcon from "@material-ui/icons/Home";
+import PersonAddIcon from "@material-ui/icons/PersonAdd";
+import KeyboardIcon from "@material-ui/icons/Keyboard";
 
 export const ListItems = (
   <div>
     <Link href="/" style={{ textDecoration: "none", color: "#fff" }}>
       <ListItem button>
         <ListItemIcon style={{ textDecoration: "none", color: "#fff" }}>
-          <DashboardIcon />
+          <HomeIcon />
         </ListItemIcon>
-        <ListItemText primary="Dashboard" />
+        <ListItemText primary="Início" />
       </ListItem>
     </Link>
     <Link href="/cadastro" style={{ textDecoration: "none", color: "#fff" }}>
       <ListItem button>
         <ListItemIcon style={{ textDecoration: "none", color: "#fff" }}>
-          <DashboardIcon />
+          <PersonAddIcon />
         </ListItemIcon>
         <ListItemText primary="Cadastro" />
       </ListItem>
@@ -35,7 +37,7 @@ export const ListItems = (
     <Link href="/binds" style={{ textDecoration: "none", color: "#fff" }}>
       <ListItem button>
         <ListItemIcon style={{ textDecoration: "none", color: "#fff" }}>
-          <PeopleIcon />
+          <KeyboardIcon />
         </ListItemIcon>
         <ListItemText primary="Binds" />
       </ListItem>

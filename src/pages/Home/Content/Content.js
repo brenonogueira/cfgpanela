@@ -1,10 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import ButtonBase from "@material-ui/core/ButtonBase";
+
 import Typography from "@material-ui/core/Typography";
-import img1 from "../../../assets/img/csgocard.png";
-import img2 from "../../../assets/img/csgocard2.jpg";
-import { useHistory } from "react-router-dom";
+
+import CardActionArea from "@material-ui/core/CardActionArea";
+
+import Card from "@material-ui/core/Card";
+import Link from "@material-ui/core/Link";
+import Grid from "@material-ui/core/Grid";
+
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -82,102 +88,63 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Content() {
-  let history = useHistory();
-
-  const linkToJogadores = () => {
-    history.push("/jogadores");
-  };
-
-  const linkToCadastro = () => {
-    history.push("/cadastro");
-  };
-
-  const images = [
-    {
-      url: `${img1}`,
-      title: "Cfgs",
-      width: "69%",
-    },
-  ];
-
-  const images2 = [
-    {
-      url: `${img2}`,
-      title: "Cadastre a sua CFG!",
-      width: "69%",
-    },
-  ];
-
   const classes = useStyles();
 
   return (
     <>
-      <div className={classes.root}>
-        {images.map((image) => (
-          <ButtonBase
-            onClick={linkToJogadores}
-            focusRipple
-            key={image.title}
-            className={classes.image}
-            focusVisibleClassName={classes.focusVisible}
-            style={{
-              width: image.width,
-            }}
-          >
-            <span
-              className={classes.imageSrc}
-              style={{
-                backgroundImage: `url(${image.url})`,
-              }}
-            />
-            <span className={classes.imageBackdrop} />
-            <span className={classes.imageButton}>
-              <Typography
-                component="span"
-                variant="subtitle1"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {image.title}
-                <span className={classes.imageMarked} />
-              </Typography>
-            </span>
-          </ButtonBase>
-        ))}
-      </div>
-      <div className={classes.root}>
-        {images2.map((image) => (
-          <ButtonBase
-            onClick={linkToCadastro}
-            focusRipple
-            key={image.title}
-            className={classes.image}
-            focusVisibleClassName={classes.focusVisible}
-            style={{
-              width: image.width,
-            }}
-          >
-            <span
-              className={classes.imageSrc}
-              style={{
-                backgroundImage: `url(${image.url})`,
-              }}
-            />
-            <span className={classes.imageBackdrop} />
-            <span className={classes.imageButton}>
-              <Typography
-                component="span"
-                variant="subtitle1"
-                color="inherit"
-                className={classes.imageTitle}
-              >
-                {image.title}
-                <span className={classes.imageMarked} />
-              </Typography>
-            </span>
-          </ButtonBase>
-        ))}
-      </div>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={6}>
+          <Card>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="src/assets/img/csgocard.png"
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Link href="/jogadores" style={{ textDecoration: "none" }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Jogadores
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Lista completa de configs já cadastrados no CFG Panela!
+                  </Typography>
+                </Link>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Card>
+            <CardActionArea>
+              <CardMedia
+                className={classes.media}
+                image="src/assets/img/csgocard.png"
+                title="Contemplative Reptile"
+              />
+              <CardContent>
+                <Link href="/cadastro" style={{ textDecoration: "none" }}>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Cadastre-se
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    Preencha o formulário de cadastro com informações básicas da
+                    sua CFG
+                  </Typography>
+                </Link>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        </Grid>
+      </Grid>
     </>
   );
 }
